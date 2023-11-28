@@ -39,7 +39,11 @@ buttonPlay.addEventListener("click",
             square.addEventListener("click", 
                 function()  {
 
-            square.classList.add("clicked");
+                    // aggiunta classe
+                    square.classList.add("clicked");
+
+                    // stampa in console il numero
+                    console.log(i);
 
                 }
             )
