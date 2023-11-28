@@ -4,6 +4,9 @@ const buttonPlay = document.querySelector(".play");
 // selezione difficoltà
 const selezioneDifficolta = document.getElementById("difficoltà");
 
+// quantità di square
+let squareNum;
+
 // al click del bottone play appare la griglia
 buttonPlay.addEventListener("click", 
     function()  {
@@ -22,10 +25,9 @@ buttonPlay.addEventListener("click",
 
         // difficoltà selezionata
         const difficoltaSelezionata = selezioneDifficolta.value;
-        
-        // quantità di square
-        let squareNum;
 
+        
+        
         // se difficoltà seleziona è facile
         if (difficoltaSelezionata === "facile") {
 
@@ -36,10 +38,7 @@ buttonPlay.addEventListener("click",
                 create(i, container);
             }
 
-        }
-
-        // se difficoltà selezionata è medio
-        if (difficoltaSelezionata === "medio") {
+        } else if (difficoltaSelezionata === "medio") {
 
             squareNum = 81;
 
@@ -48,10 +47,7 @@ buttonPlay.addEventListener("click",
                 create(i, container);
            }   
 
-        }
-
-        // se difficoltà selezionata è difficile
-        if (difficoltaSelezionata === "difficile") {
+        } else if (difficoltaSelezionata === "difficile") {
 
             squareNum = 49;
 
@@ -74,6 +70,12 @@ function create(i, container) {
 
     // aggiunta classe 
     square.classList.add("square");
+
+    if (squareNum === 81) {
+        square.classList.add("media");
+    } else if (squareNum === 49) {
+        square.classList.add("difficile");
+    }
 
     // append al container
     container.append(square);
