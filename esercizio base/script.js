@@ -17,8 +17,19 @@ buttonPlay.addEventListener("click",
         // append al main
         main.append(container);
 
-        
+        // ciclo for per creare 100 quadrati
+        for (let i = 0; i < 100; i++) {
 
+            // creazione quadrati interni
+            const square = document.createElement("div");
+
+            // aggiunta classe 
+            square.classList.add("square");
+
+            // append al container
+            container.append(square);
+
+        }
 
 
     }
