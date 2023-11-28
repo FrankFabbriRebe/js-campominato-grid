@@ -33,6 +33,23 @@ header  {
 main    {
     height: 80vh;
     background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border: 1px solid black;
+    height: 90%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
 }
 
 footer  {
