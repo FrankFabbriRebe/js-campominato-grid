@@ -1,5 +1,8 @@
 // selezione bottone play
-const buttonPlay = document.querySelector(".play")
+const buttonPlay = document.querySelector(".play");
+
+// selezione difficoltà
+const selezioneDifficolta = document.getElementById("difficoltà");
 
 // al click del bottone play appare la griglia
 buttonPlay.addEventListener("click", 
@@ -17,6 +20,9 @@ buttonPlay.addEventListener("click",
         // append al main
         main.append(container);
 
+        // difficoltà selezionata
+        const difficoltaSelezionata = selezioneDifficolta.value;
+    
         // ciclo for per creare 100 quadrati
         for (let i = 1; i <= 100; i++) {
 
