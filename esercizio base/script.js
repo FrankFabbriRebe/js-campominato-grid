@@ -35,8 +35,17 @@ buttonPlay.addEventListener("click",
             // append allo square
             square.append(number);
 
-        }
+            // al click della cella cambia colore di sfondo e stampa in console il risultato
+            square.addEventListener("click", 
+                function()  {
 
+            square.classList.add("clicked");
+
+                }
+            )
+
+        }
 
     }
 )
+
