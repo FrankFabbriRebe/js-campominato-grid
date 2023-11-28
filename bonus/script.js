@@ -22,40 +22,72 @@ buttonPlay.addEventListener("click",
 
         // difficoltà selezionata
         const difficoltaSelezionata = selezioneDifficolta.value;
-    
-        // ciclo for per creare 100 quadrati
-        for (let i = 1; i <= 100; i++) {
+        
+        // se difficoltà seleziona è facile
+        if (difficoltaSelezionata === "facile") {
 
-            // creazione quadrati interni
-            const square = document.createElement("div");
+             // ciclo for per creare 100 quadrati
+            for (let i = 1; i <= 100; i++) {
+                create(i, container);
+            }
 
-            // aggiunta classe 
-            square.classList.add("square");
+        }
 
-            // append al container
-            container.append(square);
+        // se difficoltà selezionata è medio
+        if (difficoltaSelezionata === "medio") {
 
-            // creazione contenuti square
-            const number = i;
+            // ciclo for per creare 100 quadrati
+           for (let i = 1; i <= 81; i++) {
+                create(i, container);
+           }   
 
-            // append allo square
-            square.append(number);
+        }
 
-            // al click della cella cambia colore di sfondo e stampa in console il risultato
-            square.addEventListener("click", 
-                function()  {
+        // se difficoltà selezionata è difficile
+        if (difficoltaSelezionata === "difficile") {
 
-                    // aggiunta classe
-                    square.classList.add("clicked");
-
-                    // stampa in console il numero
-                    console.log(i);
-
-                }
-            )
+            // ciclo for per creare 100 quadrati
+           for (let i = 1; i <= 49; i++) {
+                create(i, container);
+           }   
 
         }
 
     }
 )
 
+
+
+
+//funzione
+function create(i, container) {
+
+    // creazione quadrati interni
+    const square = document.createElement("div");
+
+    // aggiunta classe 
+    square.classList.add("square");
+
+    // append al container
+    container.append(square);
+
+    // creazione contenuti square
+    const number = i;
+
+    // append allo square
+    square.append(number);
+
+    // al click della cella cambia colore di sfondo e stampa in console il risultato
+    square.addEventListener("click", 
+        function()  {
+
+            // aggiunta classe
+            square.classList.add("clicked");
+
+            // stampa in console il numero
+            console.log(i);
+
+        }
+    )
+
+}
