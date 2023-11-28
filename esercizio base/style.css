@@ -53,6 +53,10 @@ main    {
     align-items: center;
 }
 
+.clicked {
+    background-color: blue;
+}
+
 footer  {
     height: 10vh;
     font-size: 20px;
