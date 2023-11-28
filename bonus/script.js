@@ -23,11 +23,16 @@ buttonPlay.addEventListener("click",
         // difficoltà selezionata
         const difficoltaSelezionata = selezioneDifficolta.value;
         
+        // quantità di square
+        let squareNum;
+
         // se difficoltà seleziona è facile
         if (difficoltaSelezionata === "facile") {
 
+            squareNum = 100;
+
              // ciclo for per creare 100 quadrati
-            for (let i = 1; i <= 100; i++) {
+            for (let i = 1; i <= squareNum; i++) {
                 create(i, container);
             }
 
@@ -36,8 +41,10 @@ buttonPlay.addEventListener("click",
         // se difficoltà selezionata è medio
         if (difficoltaSelezionata === "medio") {
 
+            squareNum = 81;
+
             // ciclo for per creare 100 quadrati
-           for (let i = 1; i <= 81; i++) {
+           for (let i = 1; i <= squareNum; i++) {
                 create(i, container);
            }   
 
@@ -46,8 +53,10 @@ buttonPlay.addEventListener("click",
         // se difficoltà selezionata è difficile
         if (difficoltaSelezionata === "difficile") {
 
+            squareNum = 49;
+
             // ciclo for per creare 100 quadrati
-           for (let i = 1; i <= 49; i++) {
+           for (let i = 1; i <= squareNum; i++) {
                 create(i, container);
            }   
 
@@ -55,8 +64,6 @@ buttonPlay.addEventListener("click",
 
     }
 )
-
-
 
 
 //funzione
